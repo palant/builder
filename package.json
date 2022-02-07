@@ -1,0 +1,38 @@
+{
+  "title": "Modern build toolkit",
+  "name": "builder",
+  "description": "A gulp-like build system with modern JavaScript",
+  "author": "Wladimir Palant",
+  "license": "MPL-2.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palant/builder.git"
+  },
+  "bin": {
+    "builder": "./bin/builder.js"
+  },
+  "exports": {
+    ".": "./builder.js",
+    "./tools/eslint": "./tools/eslint.js",
+    "./tools/htmlhint": "./tools/htmlhint.js",
+    "./tools/mocha": "./tools/mocha.js",
+    "./tools/rollup": "./tools/rollup.js",
+    "./tools/sass": "./tools/sass.js",
+    "./tools/stylelint": "./tools/stylelint.js",
+    "./tools/zip": "./tools/zip.js"
+  },
+  "dependencies": {
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2"
+  },
+  "optionalDependencies": {
+    "eslint": "^8.8.0",
+    "htmlhint": "^1.1.2",
+    "mocha": "^9.2.0",
+    "rollup": "^2.67.0",
+    "sass": "^1.49.7",
+    "stylelint": "^14.3.0",
+    "adm-zip": "^0.5.9"
+  }
+}
