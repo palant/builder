@@ -88,7 +88,7 @@ Third-party tool integration
 Several simple modules can be imported and will provide handlers to integrate with third-party tools:
 
 * `builder/tools/eslint`: [ESLint](https://eslint.org/) integration. The handler takes an optional `options` parameter, the options will be passed to ESLint.
-* `builder/tools/htmlhint`: [HTMLHint](https://htmlhint.com/) integration. The handler takes an optional `options` parameter, the options will be passed to HTMLHint.
+* `builder/tools/html-validate`: [HTML-validate](https://html-validate.org/) integration. The handler takes an optional `options` parameter, the options will be passed to HTML-validate.
 * `builder/tools/mocha`: [Mocha](https://mochajs.org/) integration. The handler takes an optional `options` parameter, the options will be passed to Mocha.
 * `builder/tools/rollup`: [rollup.js](https://rollupjs.org/guide/en/) integration. The handler takes optional `inputOptions` and `outputOptions` parameters, these options will be passed to rollup.js.
 * `builder/tools/sass`: [Sass](https://sass-lang.com/) integration. This handler will change file extension into `.css` after processing.
