@@ -16,8 +16,8 @@ This build file will validate all JavaScript files in the `scripts/` directory w
 File processing is generally being done by means of [async iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of), making it easy to implement custom handling and to integrate third-party tools. Here, function `concat()` exemplifies the approach.
 
 ```js
-import eslint from "builder/tools/eslint";
 import {series, MemoryFile} from "builder";
+import eslint from "./eslint.js";
 
 export function clean()
 {
@@ -81,16 +81,3 @@ API reference
   * `constructor(path, contents)`: `contents` can either be a `Buffer` instance or a string. The latter will result in UTF-8 encoding.
   * `buffer`: The `Buffer` instance with the file contents.
   * `contents`: The UTF-8 decided file contents as a string.
-
-Third-party tool integration
-============================
-
-Several simple modules can be imported and will provide handlers to integrate with third-party tools:
-
-* `builder/tools/eslint`: [ESLint](https://eslint.org/) integration. The handler takes an optional `options` parameter, the options will be passed to ESLint.
-* `builder/tools/html-validate`: [HTML-validate](https://html-validate.org/) integration. The handler takes an optional `options` parameter, the options will be passed to HTML-validate.
-* `builder/tools/mocha`: [Mocha](https://mochajs.org/) integration. The handler takes an optional `options` parameter, the options will be passed to Mocha.
-* `builder/tools/rollup`: [rollup.js](https://rollupjs.org/guide/en/) integration. The handler takes optional `inputOptions` and `outputOptions` parameters, these options will be passed to rollup.js.
-* `builder/tools/sass`: [Sass](https://sass-lang.com/) integration. This handler will change file extension into `.css` after processing.
-* `builder/tools/stylelint`: [Stylelint](https://stylelint.io/) integration. The handler takes an optional `options` parameter, the options will be passed to Stylelint.
-* `builder/tools/zip`: [adm-zip](https://www.npmjs.com/package/adm-zip) integration. The handler takes the zip file name as parameter and compresses any incoming files into a single archive.

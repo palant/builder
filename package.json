@@ -13,26 +13,13 @@
     "builder": "./bin/builder.js"
   },
   "exports": {
-    ".": "./builder.js",
-    "./tools/eslint": "./tools/eslint.js",
-    "./tools/html-validate": "./tools/html-validate.js",
-    "./tools/mocha": "./tools/mocha.js",
-    "./tools/rollup": "./tools/rollup.js",
-    "./tools/sass": "./tools/sass.js",
-    "./tools/stylelint": "./tools/stylelint.js",
-    "./tools/zip": "./tools/zip.js"
+    ".": "./builder.js"
+  },
+  "engine": {
+    "node": ">= 14"
   },
   "dependencies": {
     "glob": "^7.2.0",
     "glob-promise": "^4.2.2"
-  },
-  "optionalDependencies": {
-    "eslint": "^8.8.0",
-    "html-validate": "^6.3.1",
-    "mocha": "^9.2.0",
-    "rollup": "^2.67.0",
-    "sass": "^1.49.7",
-    "stylelint": "^14.3.0",
-    "adm-zip": "^0.5.9"
   }
 }
