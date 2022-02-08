@@ -49,6 +49,8 @@ export let scripts = series(eslintTask, function(files)
 export default scripts;
 ```
 
+You can also see a more complicated real-life example [in the PfP project](https://github.com/palant/pfp/blob/main/build.js).
+
 API reference
 =============
 
