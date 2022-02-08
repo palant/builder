@@ -82,4 +82,4 @@ API reference
 * `MemoryFile` class: Represents a file in memory. This could be a physical file read into memory and possibly modified or an entirely virtual file not stored on disk at all.
   * `constructor(path, contents)`: `contents` can either be a `Buffer` instance or a string. The latter will result in UTF-8 encoding.
   * `buffer`: The `Buffer` instance with the file contents.
-  * `contents`: The UTF-8 decided file contents as a string.
+  * `contents`: The UTF-8 decoded file contents as a string.
