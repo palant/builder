@@ -8,6 +8,7 @@
 
 import path from "path";
 import process from "process";
+import url from "url";
 
 import {Files} from "./files.js";
 import {PhysicalFile, MemoryFile} from "./file.js";
@@ -47,7 +48,7 @@ export default class Builder
     this.#buildFile = path.resolve(buildFile);
     this.#taskMap = new Map();
 
-    let module = await import(this.#buildFile);
+    let module = await import(url.pathToFileURL(this.#buildFile).href);
     for (let name of Object.keys(module))
       if (typeof module[name] == "function")
         this.#taskMap.set(name, new Task(module[name], name));
