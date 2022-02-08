@@ -87,7 +87,8 @@ export default class Builder
       return task;
     };
 
-    await series(...taskNames.map(getTask)).call(this);
+    for (let task of taskNames.map(getTask))
+      await task.run(this);
   }
 
   log(...args)
